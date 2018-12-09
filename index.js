@@ -37,9 +37,6 @@ class CallApp {
   }
 
   generateYingYongBao(config) {
-    if(!config.yingyongbao && !this.options.yingyongbao) {
-      return;
-    }
     return generate.generateYingYongBao(config, this.options);
   }
 
@@ -96,13 +93,15 @@ class CallApp {
     const { callback } = config;
     const supportUniversal = typeof universal !== 'undefined';
     const schemeURL = this.generateScheme(config);
+    const supportSchemeURL = typeof schemeURL !== 'undefined';
     let checkOpenFall = null;
 
     if (typeof logFunc !== 'undefined') {
       logFunc();
     }
-
-    if (browser.isIos) {
+    if (supportSchemeURL) {
+      evokeByLocation(schemeURL);
+    } else if (browser.isIos) {
       if (browser.isWechat) {
         evokeByLocation(appstore);
       } else if ((getIOSVersion() < 9)) {
