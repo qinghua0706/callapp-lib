@@ -198,3 +198,29 @@ APP 的应用宝地址，例：`'//a.app.qq.com/o/simple.jsp?pkgname=com.youku.s
 ### generateUniversalLink
 
 生成 Universal Link，接收参数同 `generateScheme` 方法参数。
+
+### windows下编译环境
+
+下载对应版本的nodejs并安装 https://nodejs.org/en/download/ 
+
+查看node和npm版本
+```
+node -v
+npm -v
+```
+
+git clone 本项目
+
+安装依赖包
+```
+npm install
+```
+安装rollup
+```
+npm install rollup --global
+```
+编译本项目
+```
+rollup
+```
+如果成功编译没有报错会在dist目录下生成新的
