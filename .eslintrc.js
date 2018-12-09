@@ -7,5 +7,6 @@ module.exports = {
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": true,
     }],
+    "linebreak-style": ["error", "windows"],
   }
 };

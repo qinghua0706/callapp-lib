@@ -37,6 +37,9 @@ class CallApp {
   }
 
   generateYingYongBao(config) {
+    if(!config.yingyongbao && !this.options.yingyongbao) {
+      return;
+    }
     return generate.generateYingYongBao(config, this.options);
   }
 
