@@ -223,4 +223,4 @@ npm install rollup --global
 ```
 rollup
 ```
-如果成功编译没有报错会在dist目录下生成新的
+如果成功编译没有报错会在dist目录下生成新的index.umd.js
